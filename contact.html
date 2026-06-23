@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sun's Tax & Bookkeeping Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: var(--gold-pale); }
+
+    .contact-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding-top: calc(var(--nav-h) + 5rem);
+      padding-bottom: 7rem;
+      padding-left: 7vw;
+      padding-right: 7vw;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact-header p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      margin-top: 0.75rem;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border: 1px solid rgba(184, 151, 58, 0.25);
+      border-radius: 4px;
+      padding: 2.5rem 3rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--cream);
+      border: 1px solid rgba(28, 26, 22, 0.15);
+      border-radius: 2px;
+      padding: 10px 14px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-notice {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .form-notice strong { color: var(--gold); font-weight: 400; }
+
+    #contact-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .success-icon {
+      width: 56px;
+      height: 56px;
+      background: #E8F5E9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 24px;
+    }
+
+    #contact-success h3 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    #contact-success p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 768px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-mark" src="logo.png" alt="Sun's Tax & Bookkeeping logo" />
+    </a>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="btn-nav active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-inner">
+    <div class="contact-header">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-heading">Contact Tracy</h2>
+      <p>Send a message below and Tracy will get back to you within 1–2 business days.</p>
+    </div>
+
+    <div class="contact-form" id="contact-form-wrapper">
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(613) 555-0100" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select name="subject" required>
+            <option value="" disabled selected>What can Tracy help you with?</option>
+            <option>Personal Income Tax</option>
+            <option>Small Business Bookkeeping</option>
+            <option>Business Tax Return</option>
+            <option>Tax Planning & Advice</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell Tracy a bit about your situation or what you'd like to discuss..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; font-size:13px; padding:15px;">Send Message</button>
+        <p class="form-notice"><strong>Note:</strong> Tracy reviews all messages personally and will follow up by email.</p>
+      </form>
+
+      <div id="contact-success">
+        <div class="success-icon">✓</div>
+        <h3>Message Sent</h3>
+        <p>Thank you! Tracy will be in touch within 1–2 business days.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">
+      Sun's Tax & Bookkeeping Services
+      <span>Tracy Sun, CEA® · Kanata, Ottawa</span>
+    </div>
+    <div class="footer-copy">&copy; 2026 Sun's Tax & Bookkeeping Services. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('contact-success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again or email tracy@sunsaccounting.com directly.');
+        }
+      } catch {
+        alert('Something went wrong. Please try again or email tracy@sunsaccounting.com directly.');
+      }
+    });
+  </script>
+
+</body>
+</html>

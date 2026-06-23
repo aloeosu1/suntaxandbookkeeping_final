@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Sun's Tax & Bookkeeping Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: calc(var(--nav-h) + 5rem);
+      padding-bottom: 7rem;
+      padding-left: 7vw;
+      padding-right: 7vw;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .service-card {
+      background: var(--cream-dark);
+      border: 1px solid rgba(184, 151, 58, 0.2);
+      border-radius: 4px;
+      padding: 2rem 1.75rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .service-card:hover {
+      background: var(--gold-pale);
+      border-color: rgba(184, 151, 58, 0.4);
+    }
+
+    .service-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 400;
+      color: rgba(184, 151, 58, 0.3);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .service-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    .clients-section {
+      text-align: center;
+      padding-top: 4rem;
+      border-top: 1px solid rgba(184, 151, 58, 0.2);
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .client-pill {
+      background: var(--cream-dark);
+      border: 1px solid rgba(184, 151, 58, 0.2);
+      border-radius: 2px;
+      padding: 1rem 1.25rem;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--ink-mid);
+      letter-spacing: 0.03em;
+    }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-mark" src="logo.png" alt="Sun's Tax & Bookkeeping logo" />
+    </a>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html" class="btn-nav">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="services-inner">
+    <div class="services-header">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-heading">Services</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3 class="service-title">Personal Tax Returns (T1)</h3>
+        <p class="service-desc">Accurate and timely tax preparation for:</p>
+        <ul style="font-family: var(--sans); font-weight: 300; font-size: 13px; color: var(--ink-mid); line-height: 1.7; padding-left: 1.25rem; margin-top: 0.5rem;">
+            <li>Employment Income</li>
+            <li>Self-employment Income</li>
+            <li>Rental properties</li>
+            <li>Investment Income</li>
+            <li>Seniors and retirees</li>
+            <li>Students</li>
+        </ul>
+        
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Bookkeeping Services</h3>
+        <p class="service-desc">Monthly and quarterly bookkeeping support including:</p>
+        <ul style="font-family: var(--sans); font-weight: 300; font-size: 13px; color: var(--ink-mid); line-height: 1.7; padding-left: 1.25rem; margin-top: 0.5rem;">
+          <li>Bank reconciliations</li>
+          <li>Expense tracking</li>
+          <li>Financial reporting</li>
+          <li>HST filing</li>
+          <li>QuickBooks support</li>
+
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3 class="service-title">Small Business Support</h3>
+        <p class="service-desc">Helping entrepreneurs focus on growing their business while we handle the numbers. Services include:</p>
+        <ul style="font-family: var(--sans); font-weight: 300; font-size: 13px; color: var(--ink-mid); line-height: 1.7; padding-left: 1.25rem; margin-top: 0.5rem;">
+          <li>Business bookkeeping</li>
+          <li>GST/HST returns</li>
+          <li>Payroll support</li>
+          <li>Year-end preparation for accountants</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="clients-section">
+      <p class="section-label">Trusted By</p>
+      <h2 class="section-heading">Who We <em>Serve</em></h2>
+      <div class="clients-grid">
+        <div class="client-pill">Law Firms</div>
+        <div class="client-pill">Real Estate Professionals</div>
+        <div class="client-pill">Non-Profit Organizations</div>
+        <div class="client-pill">Family Medical Clinics</div>
+        <div class="client-pill">Small Business Owners</div>
+        <div class="client-pill">Individual Taxpayers</div>
+      </div>
+      <a href="contact.html" class="btn-primary">Get in Touch</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">
+      Sun's Tax & Bookkeeping Services
+      <span>Tracy Sun, CEA® · Kanata, Ottawa</span>
+    </div>
+    <div class="footer-copy">&copy; 2026 Sun's Tax & Bookkeeping Services. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

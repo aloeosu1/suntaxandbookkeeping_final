@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sun's Tax & Bookkeeping Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+
+    #hero {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .hero-text {
+      padding: 6vw 5vw 6vw 7vw;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-heading {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 4.5vw, 5rem);
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-heading em { font-style: italic; color: var(--gold); }
+
+    .hero-title {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      max-width: 400px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      min-height: calc(100vh - var(--nav-h));
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream-dark);
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--gold-pale) 0%, var(--cream-dark) 100%);
+      z-index: 0;
+    }
+
+    .hero-portrait {
+      width: min(420px, 80%);
+      height: min(420px, 80%);
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      position: relative;
+      z-index: 1;
+      border: 4px solid rgba(184, 151, 58, 0.35);
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      background: var(--white);
+      border: 1px solid rgba(184, 151, 58, 0.3);
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .hero-badge-num {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero-badge-label {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.7s ease both; }
+    .hero-heading  { animation: fadeUp 0.7s 0.1s ease both; }
+    .hero-title    { animation: fadeUp 0.7s 0.2s ease both; }
+    .hero-desc     { animation: fadeUp 0.7s 0.3s ease both; }
+    .hero-ctas     { animation: fadeUp 0.7s 0.4s ease both; }
+
+    @media (max-width: 768px) {
+      
+      #hero { grid-template-columns: 1fr; height: auto; }
+      .hero-image { height: 55vw; }
+      .hero-text { padding: 3rem 6vw; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo active">
+      <img class="nav-logo-mark" src="C:\Users\micha\Desktop\suntaxv2\logo.png" alt="Sun's Tax & Bookkeeping logo" />
+    </a>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="btn-nav">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Kanata, Ottawa</p>
+      <h1 class="hero-heading">Tracy <em>Sun</em><br>CEA®</h1>
+      <p class="hero-title">Senior Personal Income Tax Accountant & Bookkeeper</p>
+      <p class="hero-desc">Welcome to Sun’s Tax & Bookkeeping Services, where we provide reliable and professional accounting support tailored to your needs.
+      </p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn-primary">Book a Consultation</a>
+        <a href="services.html" class="btn-outline">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img class="hero-portrait" src="C:\Users\micha\Desktop\suntaxv2\tracy_picture.png" alt="Tracy Sun" />
+      <div class="hero-badge">
+        <div class="hero-badge-num">15+</div>
+        <div class="hero-badge-label">Years of Experience</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">
+      Sun's Tax & Bookkeeping Services
+      <span>Tracy Sun, CEA® · Kanata, Ottawa</span>
+    </div>
+    <div class="footer-copy">&copy; 2026 Sun's Tax & Bookkeeping Services. All rights reserved.</div>
+  </footer>
+</body>
+</html>
